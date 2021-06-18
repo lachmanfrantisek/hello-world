@@ -13,21 +13,19 @@ jobs:
   trigger: pull_request
   metadata:
     targets:
-    - fedora-stable-x86_64
-    - fedora-rawhide-x86_64
+    - fedora-all
 
 - job: copr_build
   trigger: release
   metadata:
     targets:
-    - fedora-stable
+    - fedora-all
 
 - job: tests
   trigger: pull_request
   metadata:
     targets:
-    - fedora-stable-x86_64
-    - fedora-rawhide-x86_64
+    - fedora-all
 
 - job: propose_downstream
   trigger: release
